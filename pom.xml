@@ -65,7 +65,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
-                    <includes>**/SmokeRunner.java</includes>
+                    <includes>**/MainRunner.java</includes>
                 </configuration>
             </plugin>
             <plugin>

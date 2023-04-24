@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         glue = "StepDefinitions",
         dryRun = false,
         tags = "@testCase1",
-        plugin ={"pretty"}
+        plugin ={"pretty", "json:target/cucumber-reports"}
 )
 public class MainRunner {
 }
