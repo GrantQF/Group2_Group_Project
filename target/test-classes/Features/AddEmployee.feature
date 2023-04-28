@@ -7,5 +7,5 @@ Feature: Employee
     When user clicks on PIM
     And user clicks on add employee button
     And user enters firstname and middlename and lastname
-   # And user clicks on save button
+    And user clicks on save button
     #  And close the browser
