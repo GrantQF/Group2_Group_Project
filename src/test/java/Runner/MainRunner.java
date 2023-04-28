@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/Features",
         glue = "StepDefinitions",
         dryRun = false,
-        tags = "@smoke",
+        tags = "@dependents",
         plugin ={"pretty"}
 )
 public class MainRunner {
