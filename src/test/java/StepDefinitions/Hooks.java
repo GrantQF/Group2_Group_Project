@@ -18,7 +18,7 @@ public class Hooks extends CommonMethods {
         if(scenario.isFailed()){
             pic=takeScreenshot("failed/" +scenario.getName());
         }else {
-            pic=takeScreenshot("passwed/"+scenario.getName());
+            pic=takeScreenshot("passed/"+scenario.getName());
         }
 
         //attaches screenshot to reports
