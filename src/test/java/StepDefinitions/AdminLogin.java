@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class AdminLogin extends CommonMethods {
 
     //        create an instance of WebDriver
-    WebDriver driver=new ChromeDriver();
+
     @Given("open the browser and launch HRMS application")
     public void open_the_browser_and_launch_hrms_application() {
         //driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");

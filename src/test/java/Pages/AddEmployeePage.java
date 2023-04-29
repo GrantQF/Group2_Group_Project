@@ -18,6 +18,23 @@ public class AddEmployeePage extends CommonMethods {
     public WebElement middleNameTextBox;
     @FindBy(id="lastName")
     public  WebElement lastNameTextBox;
+    @FindBy(xpath="//input[@id='chkLogin']")
+    public WebElement loginBox;
+
+    @FindBy(xpath="//input[@id='user_name']")
+    public WebElement userNameBox;
+
+    @FindBy(xpath="//input[@id='user_password']")
+    public WebElement userPasswordBox;
+
+    @FindBy(xpath="//input[@id='re_password']")
+    public WebElement  rePasswordBox;
+
+    @FindBy(xpath="//select[@id='status']")
+    public WebElement  statusBox;
+
+    @FindBy(xpath="//input[@id='btnSave']")
+    public WebElement  btnSaveBox;
     @FindBy(id="btnSave")
     public WebElement saveBtn;
     public AddEmployeePage(){

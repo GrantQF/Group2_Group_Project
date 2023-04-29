@@ -7,5 +7,9 @@ Feature: Employee
     When user clicks on PIM
     And user clicks on add employee button
     And user enters firstname and middlename and lastname
-   # And user clicks on save button
-    #  And close the browser
+    And user selects create login box
+    And user fills username
+    And user fills password and confirm it
+    And user selects status enabled
+    And user clicks on save button
+    #And close the browser
