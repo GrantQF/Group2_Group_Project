@@ -2,9 +2,8 @@ Feature: Add Dependents
 
   @dependents
   Scenario: Add Employee Dependents
-    Given admin user log in to the system using valid credentials
-    When user clicks PIM tab
-    And selects on employee from list
+    Given employee user log in to the system using valid credentials
+    When user clicks on My Info
     And clicks on dependents button under employee
     And clicks on add button under assigned dependents
     And clicks on save button

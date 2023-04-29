@@ -8,19 +8,15 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 
 public class AddDependents extends CommonMethods {
-    @Given("admin user log in to the system using valid credentials")
+    @Given("employee user log in to the system using valid credentials")
     public void admin_user_log_in_to_the_system_using_valid_credentials() {
-        sendText(login.UsernameTxtbox, ConfigReader.getPropertyValue("username"));
-        sendText(login.UsernamePswdBox, ConfigReader.getPropertyValue("password"));
+        sendText(login.UsernameTxtbox, ConfigReader.getPropertyValue("empusername"));
+        sendText(login.UsernamePswdBox, ConfigReader.getPropertyValue("emppassword"));
         doClick(login.LoginBtn);
     }
-    @When("user clicks PIM tab")
+    @When("user clicks on My Info")
     public void user_clicks_pim_tab() {
-        doClick(addDependents.pimTab);
-    }
-    @When("selects on employee from list")
-    public void selects_on_employee_from_list() {
-        doClick(addDependents.employeeSelect);
+        doClick(addDependents.myInfoTab);
     }
     @When("clicks on dependents button under employee")
     public void clicks_on_dependents_button_under_employee() {
@@ -33,6 +29,8 @@ public class AddDependents extends CommonMethods {
     @When("clicks on save button")
     public void clicks_on_save_button() {
         doClick(addDependents.saveBtn);
+        selectByVisibleText(addDependents.relationshipBtn, "Other");
+        doClick(addDependents.saveBtn);
     }
     @When("displays correct error messages")
     public void shows_correct_error_messages() {
@@ -42,16 +40,40 @@ public class AddDependents extends CommonMethods {
         WebElement Required2 = addDependents.requiredDisp2;
         Required2.isDisplayed();
         System.out.println("Second Required error message is displayed");
+        WebElement Required3 = addDependents.requiredDisp3;
+        Required3.isDisplayed();
+        System.out.println("Third Required error message is displayed");
     }
     @When("enters dependent's name, relationship, and date of birth")
     public void enters_dependent_s_name_relationship_and_date_of_birth() {
-        sendText(addDependents.dependentNameBox, "Eric Cartman");
-        selectByVisibleText(addDependents.relationshipBtn, "Child");
+        sendText(addDependents.dependentNameBox, "Jessica Mary Torn");
+        selectByVisibleText(addDependents.relationshipBtn, "Other");
+        sendText(addDependents.dependentRelationshipBox, "Spouse");
         doClick(addDependents.dObBox);
         doClick(addDependents.monthBtn);
         selectByVisibleText(addDependents.monthBtn, "May");
         doClick(addDependents.yearBtn);
-        selectByVisibleText(addDependents.yearBtn, "2010");
+        selectByVisibleText(addDependents.yearBtn, "1980");
+        doClick(addDependents.dateBtn);
+        doClick(addDependents.saveBtn);
+        doClick(addDependents.addBtn);
+        sendText(addDependents.dependentNameBox, "Mike John Torn Jr.");
+        selectByVisibleText(addDependents.relationshipBtn, "Child");
+        doClick(addDependents.dObBox);
+        doClick(addDependents.monthBtn);
+        selectByVisibleText(addDependents.monthBtn, "Jun");
+        doClick(addDependents.yearBtn);
+        selectByVisibleText(addDependents.yearBtn, "2006");
+        doClick(addDependents.dateBtn);
+        doClick(addDependents.saveBtn);
+        doClick(addDependents.addBtn);
+        sendText(addDependents.dependentNameBox, "Ashley Ann Torn");
+        selectByVisibleText(addDependents.relationshipBtn, "Child");
+        doClick(addDependents.dObBox);
+        doClick(addDependents.monthBtn);
+        selectByVisibleText(addDependents.monthBtn, "Mar");
+        doClick(addDependents.yearBtn);
+        selectByVisibleText(addDependents.yearBtn, "2008");
         doClick(addDependents.dateBtn);
     }
     @Then("user clicks save button to successfully save dependent")
