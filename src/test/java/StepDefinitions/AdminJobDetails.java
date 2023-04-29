@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdminJobDetails extends CommonMethods {
@@ -136,7 +137,8 @@ public class AdminJobDetails extends CommonMethods {
 
     @Then("The System Validates the Mandatory Fields Are Filled in")
     public void theSystemValidatesTheMandatoryFieldsAreFilledIn() {
-        String jobTitle = employeeEditPage.jobTitleDropDown.getAttribute("value");
+
+        /*String jobTitle = employeeEditPage.jobTitleDropDown.getAttribute("value");
         if (jobTitle.equalsIgnoreCase("-- Select --") || jobTitle.equals("")){
             System.out.println("The Job Title Field is empty");
         }else{
@@ -162,7 +164,7 @@ public class AdminJobDetails extends CommonMethods {
             System.out.println("The Location Field is empty");
         }else{
             System.out.println("The Location Field is filled");
-        }
+        }*/
 
         String date = employeeEditPage.joinedDateCalender.getText();
         if (date.isEmpty() || date.isBlank()){
@@ -170,6 +172,22 @@ public class AdminJobDetails extends CommonMethods {
         }else{
             System.out.println("The Date Field is filled");
         }
+
+        List<WebElement> checkFields = new ArrayList<>();
+        checkFields.add(employeeEditPage.empStatusDropDown);
+        checkFields.add(employeeEditPage.jobTitleDropDown);
+        checkFields.add(employeeEditPage.subUnitDropDown);
+        checkFields.add(employeeEditPage.locationDropDown);
+
+        for (WebElement checkField : checkFields) {
+            String checker = checkField.getAttribute("value");
+            if (checker.equalsIgnoreCase("-- Select --") || checker.equals("")){
+                System.out.println("The" +checkField.getAttribute("id")+ "Field is empty");
+            }else{
+                System.out.println("The" +checkField.getAttribute("id")+ "Location Field is filled");
+            }
+        }
+
 
     }
 
