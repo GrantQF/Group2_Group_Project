@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/Features",
         glue = "StepDefinitions",
         dryRun = false,
-        tags = "@testCase1",
-        plugin ={"pretty", "json:target/cucumber-reports"}
+        tags = "@smoke",
+        plugin ={"pretty", "html:target/Cucumber.html", "json:target/Cucumber.json"}
 )
 public class MainRunner {
 }
