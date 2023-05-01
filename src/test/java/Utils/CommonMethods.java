@@ -17,8 +17,6 @@ import java.util.Date;
 import java.util.List;
 public class CommonMethods extends PageInitializer {
     public static WebDriver driver;
-
-
     public static void openBrowserAndLaunchApplication() {
         ConfigReader.readProperties();
         String browserType = ConfigReader.getPropertyValue("browserType");

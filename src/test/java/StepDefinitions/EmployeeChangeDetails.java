@@ -7,10 +7,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class EmployeeChangeDetails extends CommonMethods {
-    @When("the user is logged in with valid credentials")
+    /*@When("the user is logged in with valid credentials")
     public void the_user_is_logged_in_with_valid_credentials() {
         openBrowserAndLaunchApplication();
-    }
+    }*/
     @When("user enters valid username and valid password")
     public void user_enters_valid_username_and_valid_password() {
         sendText(empChangeDetails.usernameTxtbox, ConfigReader.getPropertyValue("empusername"));

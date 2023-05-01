@@ -8,8 +8,10 @@ import net.bytebuddy.asm.Advice;
 import Pages.AddEmployeePage;
 
 import Pages.LoginPage;
+import org.openqa.selenium.WebDriver;
 
 public class PageInitializer {
+
     public static LoginPage login;
     public static AddDependentsPage addDependents;
 
