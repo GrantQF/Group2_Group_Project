@@ -2,6 +2,10 @@ package StepDefinitions;
 
 
 import Pages.*;
+import Pages.AddEmployeePage;
+import Pages.LoginPage;
+import Pages.SearchEmployeePage;
+
 import net.bytebuddy.asm.Advice;
 
 
@@ -25,6 +29,8 @@ public class PageInitializer {
     public static EmployeeChangeDetailsPage empChangeDetails;
 
 
+    public static SearchEmployeePage searchemployeePage;
+
     public static void PageObjectInitializer(){
         terminationPage = new EmployeeTerminationPage();
         addDependents = new AddDependentsPage();
@@ -33,6 +39,8 @@ public class PageInitializer {
         mainLanding = new MainLanding();
         employeeEditPage = new EmployeeEditPage();
         empChangeDetails = new EmployeeChangeDetailsPage();
+        searchemployeePage= new SearchEmployeePage();
+
 
     }
 }

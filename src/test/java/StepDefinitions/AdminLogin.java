@@ -14,11 +14,7 @@ public class AdminLogin extends CommonMethods {
 
     //        create an instance of WebDriver
 
-    @Given("open the browser and launch HRMS application")
-    public void open_the_browser_and_launch_hrms_application() {
-        //driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
-        openBrowserAndLaunchApplication();
-    }
+
     @When("user enters valid user and valid password")
     public void user_enters_valid_email_and_valid_password() {
         sendText(login.UsernameTxtbox, ConfigReader.getPropertyValue("username"));
@@ -36,9 +32,6 @@ public class AdminLogin extends CommonMethods {
 
     }
 
-    @Then("Close the browser")
-    public void close_the_browser() {
-driver.close();
-    }
+
 
 }

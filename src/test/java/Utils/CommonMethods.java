@@ -86,25 +86,27 @@ public class CommonMethods extends PageInitializer {
             }
         }
     }
+
     //-------------------SCREENSHOT-----------------
-    public static byte[] takeScreenshot(String imageName)
-    {  // Casting the webDriver instance to take a screenshot interface
-        TakesScreenshot ts=(TakesScreenshot)driver;
+    public static byte[] takeScreenshot(String imageName) {  // Casting the webDriver instance to take a screenshot interface
+        TakesScreenshot ts = (TakesScreenshot) driver;
         // This captures the screenshot and stores it as byte array
-        byte[] picBytes= ts.getScreenshotAs(OutputType.BYTES);
+        byte[] picBytes = ts.getScreenshotAs(OutputType.BYTES);
         // This captures the screenshot and stores it as a file in the sourceFile variable
-        File sourcePath=ts.getScreenshotAs(OutputType.FILE);
+        File sourcePath = ts.getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(sourcePath,new File(Constants.SCREENSHOT_FILEPATH+imageName+getTimeStamp("yyyy-MM-dd-HH-mm-ss")+".png"));
+            FileUtils.copyFile(sourcePath, new File(Constants.SCREENSHOT_FILEPATH + imageName + getTimeStamp("yyyy-MM-dd-HH-mm-ss") + ".png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         return picBytes;
     }
-    public static String getTimeStamp(String pattern){
-        Date date=new Date() ;
-        SimpleDateFormat sdf=new SimpleDateFormat(pattern);
-        return  sdf.format(date);
+
+    public static String getTimeStamp(String pattern) {
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        return sdf.format(date);
     }
+
 }
 
