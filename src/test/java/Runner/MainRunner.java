@@ -10,9 +10,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/Features",
         glue = "StepDefinitions",
         dryRun = false,
-        tags = " @smoke",
+        tags = "@invalidlogin",
         plugin ={"pretty", "json:target/cucumber-reports"}
-
 
 )
 public class MainRunner {

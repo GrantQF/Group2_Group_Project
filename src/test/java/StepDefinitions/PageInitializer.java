@@ -1,18 +1,13 @@
 package StepDefinitions;
 
 
+
 import Pages.*;
 import Pages.AddEmployeePage;
 import Pages.LoginPage;
 import Pages.SearchEmployeePage;
+import Pages.EmployeeExperiencePage;
 
-import net.bytebuddy.asm.Advice;
-
-
-import Pages.AddEmployeePage;
-
-import Pages.LoginPage;
-import org.openqa.selenium.WebDriver;
 
 public class PageInitializer {
 
@@ -31,6 +26,8 @@ public class PageInitializer {
 
     public static SearchEmployeePage searchemployeePage;
 
+
+    public static EmployeeExperiencePage employeeExperiencePage;
     public static void PageObjectInitializer(){
         terminationPage = new EmployeeTerminationPage();
         addDependents = new AddDependentsPage();
@@ -40,7 +37,7 @@ public class PageInitializer {
         employeeEditPage = new EmployeeEditPage();
         empChangeDetails = new EmployeeChangeDetailsPage();
         searchemployeePage= new SearchEmployeePage();
-
+        employeeExperiencePage = new EmployeeExperiencePage();
 
     }
 }

@@ -5,12 +5,11 @@ import Utils.ConfigReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AdminLogin extends CommonMethods {
+
 
     //        create an instance of WebDriver
 
@@ -22,16 +21,18 @@ public class AdminLogin extends CommonMethods {
         sendText(login.UsernamePswdBox,ConfigReader.getPropertyValue("password"));
     }
     @When("click on login button")
-    public void click_on_login_button() {
-       // driver.findElement(By.xpath("//input[@name='Submit']")).click();
-        doClick(login.LoginBtn);
+    public void  click_on_login_button() {
+        // driver.findElement(By.xpath("//input[@name='Submit']")).click();
     }
+
     @Then("user is logged in successfully into the application")
     public void user_is_logged_in_successfully_into_the_application() {
-
-
+        //LoginPage login = new LoginPage();
+        boolean userloggedIn = login.welcomeIcon.isDisplayed();
+        if (userloggedIn) {
+            System.out.println("User is logged in Successfully");
+        }
     }
-
 
 
 }

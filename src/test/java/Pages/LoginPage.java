@@ -19,9 +19,13 @@ public class LoginPage extends CommonMethods {
      @FindBy(id = "btnLogin")
      public WebElement LoginBtn;
 
-    @FindBy(id="spanMessage")
-    public WebElement InvalidLogin;
+    @FindBy(id = "welcome")
+    public WebElement welcomeIcon;
 
+    @FindBy(xpath = "//a[text()='Logout']")
+    public WebElement logoutLink;
 
+    @FindBy(xpath = "//*[@id='spanMessage']")
+    public WebElement invalidcredsErrorMsg;
  }
 
