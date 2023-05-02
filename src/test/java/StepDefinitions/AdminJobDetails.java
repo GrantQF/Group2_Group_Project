@@ -8,8 +8,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -130,8 +133,7 @@ public class AdminJobDetails extends CommonMethods {
 
     }
     @Then("The System Will Store the Job Details Entered")
-    public void the_system_will_store_the_job_details_entered() throws InterruptedException {
-        Thread.sleep(5000);
+    public void the_system_will_store_the_job_details_entered(){
         doClick(employeeEditPage.editSaveBtn);
     }
 

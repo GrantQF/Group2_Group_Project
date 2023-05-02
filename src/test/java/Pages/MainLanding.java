@@ -59,4 +59,16 @@ public class MainLanding extends CommonMethods {
     @FindBy (id = "searchBtn")
     public WebElement empSearchBtn;
 
+    @FindBy (id = "btnAdd")
+    public WebElement addBtn;
+
+    @FindBy (id = "language_name")
+    public WebElement languageTxtBar;
+
+    @FindBy (id = "btnSave")
+    public WebElement langSaveBtn;
+
+    @FindBy (id = "menu_admin_viewLanguages")
+    public WebElement langMenu;
+
 }
