@@ -1,7 +1,7 @@
 Feature: Login Functionalities
 
 
-  @smoke1
+  @Adminlogin @smoke
   Scenario: Valid Admin login
 
     # THE ABOVE STEP SHOULD BE COMMENTED AS A GIVEN STEP. THIS OPEN AN ADDITIONAL UNEEDED WINDOW!!!!!!!!

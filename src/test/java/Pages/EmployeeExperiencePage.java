@@ -53,7 +53,7 @@ public class EmployeeExperiencePage extends CommonMethods {
     @FindBy(id="delWorkExperience")
     public WebElement  deletebtnBox;
 
-    @FindBy(xpath = "//input[@value='2']")
+    @FindBy(xpath = "//*[@id=\"frmDelWorkExperience\"]/table/tbody/tr[2]/td[1]")
     public WebElement companysheinbox;
 
 

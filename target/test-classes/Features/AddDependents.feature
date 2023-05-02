@@ -1,6 +1,6 @@
 Feature: Add Dependents
 
-  @dependents
+  @dependents @smoke
   Scenario: Add Employee Dependents
     Given admin user log in to the system using valid credentials
     When user clicks on PIM

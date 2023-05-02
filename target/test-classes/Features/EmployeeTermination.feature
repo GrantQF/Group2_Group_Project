@@ -1,6 +1,6 @@
 Feature: Employee Termination
 
-  @testcase
+  @testcase @smoke
   Scenario: Employee Termination Ability
     Given admin user log in to the system using valid credentials
     When user accesses the list of employees in the system

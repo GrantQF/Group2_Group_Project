@@ -4,7 +4,7 @@ Feature: Admin Job Access
     When user enters valid user and valid password
     And click on login button
 
-  @EmpEdit
+  @EmpEdit @smoke
   Scenario: Admin Can Select The Job Title Of The Employee
     # Given open the browser and launch HRMS application
     # When user enters valid user and valid password

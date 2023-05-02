@@ -1,6 +1,6 @@
 Feature: Employee
 
-  @employeeexperience
+  @employeeexperience @smoke
 
   Scenario: Employee  add work experience
     # Given open the browser and launch HRMS application
@@ -18,7 +18,7 @@ Feature: Employee
     #And Close the browser
 
 
-  @employeeexperience1
+  @employeeexperience1 @smoke
   Scenario: Employee  add work experience
     # Given open the browser and launch HRMS application
     When Employee enter valid email and valid password

@@ -23,6 +23,7 @@ public class AdminLogin extends CommonMethods {
     @When("click on login button")
     public void  click_on_login_button() {
         // driver.findElement(By.xpath("//input[@name='Submit']")).click();
+        doClick(login.LoginBtn);
     }
 
     @Then("user is logged in successfully into the application")

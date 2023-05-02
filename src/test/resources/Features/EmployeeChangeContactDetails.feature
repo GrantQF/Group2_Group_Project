@@ -1,6 +1,6 @@
 Feature: Employee Change Contact Details
 
-  @EmpChangeDetails
+  @EmpChangeDetails @smoke
   Scenario: Update Personal Information
     #When the user is logged in with valid credentials
     And user enters valid username and valid password
