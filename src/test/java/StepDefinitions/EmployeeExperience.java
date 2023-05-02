@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Utils.CommonMethods;
 import Utils.ConfigReader;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -66,7 +67,64 @@ sendText(employeeExperiencePage.companyBox,ConfigReader.getPropertyValue("compan
     }
 
 
+    @When("Employee enter valid email and valid password")
+    public void employeeEnterValidEmailAndValidPassword() {
 
+        sendText(login.UsernameTxtbox, ConfigReader.getPropertyValue("empusername1"));
+        sendText(login.UsernamePswdBox, ConfigReader.getPropertyValue("emppassword1"));
+        
+    }
+
+    @And("Employee click on login")
+    public void employeeClickOnLogin() {
+        doClick(employeeExperiencePage.loginbtn);
+    }
+
+    @And("Employee clicks on myinfo tab")
+    public void employeeClicksOnMyinfoTab() {
+        doClick(employeeExperiencePage.myinfoTab);
+    }
+
+    @And("Employee clicks on qualification tab")
+    public void employeeClicksOnQualificationTab() {
+        doClick(employeeExperiencePage.QualificationsTab);
+    }
+
+    @Then("Employee clicks on work experience add button")
+    public void employeeClicksOnWorkExperienceAddButton() {
+        doClick(employeeExperiencePage.addBtn);
+    }
+
+    @And("Employee can enter company title")
+    public void employeeCanEnterCompanyTitle() {
+        sendText(employeeExperiencePage.companyBox,ConfigReader.getPropertyValue("company1"));
+    }
+
+    @And("Employee can enter job title")
+    public void employeeCanEnterJobTitle() {
+        sendText(employeeExperiencePage.jobtitleBox,ConfigReader.getPropertyValue("jobtitle1"));
+    }
+
+    @And("Employee click on from calendar")
+    public void employeeClickOnFromCalendar() {
+        sendText(employeeExperiencePage.fromdateBox,ConfigReader.getPropertyValue("fromdate1"));
+    }
+
+    @And("Employee click on to calendar")
+    public void employeeClickOnToCalendar() {
+        sendText(employeeExperiencePage.todateBox,ConfigReader.getPropertyValue("todate1"));
+    }
+    @Then("Employee writes in the comment box")
+    public void employeeWritesInTheCommentBox() {
+
+        sendText(employeeExperiencePage.commentBox,ConfigReader.getPropertyValue("commentbox1"));
+    }
+
+
+    @And("Employee click on the save button")
+    public void employeeClickOnTheSaveButton() {
+        doClick(employeeExperiencePage.savebtnBox);
+    }
 
 
 }

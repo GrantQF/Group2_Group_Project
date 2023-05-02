@@ -19,4 +19,7 @@ public class EditExperience extends CommonMethods {
     }
 
 
+    @Then("Employee write in the comment box")
+    public void employeeWriteInTheCommentBox() {
+    }
 }

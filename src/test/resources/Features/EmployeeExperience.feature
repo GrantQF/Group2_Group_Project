@@ -18,6 +18,20 @@ Feature: Employee
     #And Close the browser
 
 
-
+  @employeeexperience1
+  Scenario: Employee  add work experience
+    # Given open the browser and launch HRMS application
+    When Employee enter valid email and valid password
+    And Employee click on login
+    And Employee clicks on myinfo tab
+    And Employee clicks on qualification tab
+    Then Employee clicks on work experience add button
+    And Employee can enter company title
+    And Employee can enter job title
+    And Employee click on from calendar
+    And Employee click on to calendar
+    Then Employee writes in the comment box
+    And Employee click on the save button
+    #And Close the browser
 
 
