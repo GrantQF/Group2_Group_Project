@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/Features",
         glue = "StepDefinitions",
         dryRun = false,
-        tags = "@testCase1 or @dependents or @EmpEdit or @SaveEmpEdit",
+        tags = "@Language",
         plugin ={"pretty", "json:target/cucumber-reports"}
 
 )
